@@ -9,11 +9,10 @@ public class Station {
     Scanner scanner = new Scanner(System.in);
 	
 	public void printDetectives() {
-		System.out.println("Listing all detectives for "+this.name);
-		for (int i=0;i<currDetectives;i++) {
-			System.out.print("/nDetective [Badge="+detectives[i].badgeNumber+", Name="+detectives[i].name+"]");
+		System.out.println("\n\nListing all detectives for "+this.name);
+		for (int i=0; i<currDetectives; i++) {
+			System.out.print("Detective [Badge="+detectives[i].badgeNumber+", Name="+detectives[i].name+"]\n");
 		}
-		System.out.println();
 	}
 	
 	public void hireDetective() {
@@ -21,15 +20,14 @@ public class Station {
 			String name;
 			System.out.print("Please enter detective name: ");
 			name=scanner.nextLine();
-			System.out.println();
+			//System.out.println();
 			detectives[currDetectives]=new Detective(name, lastBadgeNum);
 			lastBadgeNum++;
+			currDetectives++;
 		}
-		else {
-			System.out.println("Can't hire any more detectives for "+this.name);
-		}}
+	}
 	
 	public Station(String name){
 		this.name=name;
 	}
-	}
+}
