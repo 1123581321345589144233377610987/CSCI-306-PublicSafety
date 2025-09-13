@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Station {
 	final static int MAX_DETECTIVES=5;
 	public static int lastBadgeNum = 0;
@@ -18,12 +17,15 @@ public class Station {
 	public void hireDetective() {
 		if(currDetectives<MAX_DETECTIVES) {
 			String name;
-			System.out.print("Enter detective's name: ");
+			System.out.print("New hire for "+this.name+"...Enter detective's name: ");
 			name=scanner.nextLine();
 			//System.out.println();
 			detectives[currDetectives]=new Detective(name, lastBadgeNum);
 			lastBadgeNum++;
 			currDetectives++;
+		}
+		else {
+			System.out.println("Can't hire any more detectives for "+this.name);
 		}
 	}
 	
