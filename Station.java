@@ -9,7 +9,7 @@ public class Station {
     Scanner scanner = new Scanner(System.in);
 	
 	public void printDetectives() {
-		System.out.println("Listing all detectives for"+this.name);
+		System.out.println("Listing all detectives for "+this.name);
 		for (int i=0;i<currDetectives;i++) {
 			System.out.print("/nDetective [Badge="+detectives[i].badgeNumber+", Name="+detectives[i].name+"]");
 		}
