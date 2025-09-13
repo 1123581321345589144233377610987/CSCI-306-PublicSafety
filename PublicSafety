@@ -1,0 +1,24 @@
+public class PublicSafety {
+	private Station first;
+    private Station second;
+
+    public PublicSafety(String cityName, String universityName) {
+        this.first = new Station(cityName);
+        this.second = new Station(universityName);
+    }
+
+
+    public void doHire(boolean cityFlag) {
+        if (cityFlag) {
+            first.hireDetective();
+        } else {
+            second.hireDetective();
+        }
+    }
+
+    
+    public void printDetectiveLists() {
+        first.printDetectives();
+        second.printDetectives();
+    }
+}
