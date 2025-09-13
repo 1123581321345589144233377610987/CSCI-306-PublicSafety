@@ -1,0 +1,11 @@
+public class Detective {
+	String name = new String();
+	int badgeNumber = 0;
+	
+	public Detective(String name, int badgeNumber) {
+		super();
+		this.name = name;
+		this.badgeNumber = (lastBadgeNum+1);
+		lastBadgeNum++;
+	}
+}
