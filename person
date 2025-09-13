@@ -1,0 +1,27 @@
+
+abstract class Person {
+	String myName = new String();
+	String occupation = new String();
+	
+	public Person(String myName, String occupation) {
+		super();
+		this.myName = myName;
+		this.occupation = occupation;
+	}
+
+	public void askName(Person person) {
+		person.giveName();
+	}
+	
+	public String giveName() {
+		return myName;
+	}
+	
+	public String whatIDo() {
+		return occupation;
+	}
+	
+	abstract void askQuestion();
+	
+	abstract void answerQuestion();
+}
