@@ -18,7 +18,7 @@ public class Station {
 	public void hireDetective() {
 		if(currDetectives<MAX_DETECTIVES) {
 			String name;
-			System.out.print("Please enter detective name: ");
+			System.out.print("Enter detective's name: ");
 			name=scanner.nextLine();
 			//System.out.println();
 			detectives[currDetectives]=new Detective(name, lastBadgeNum);
