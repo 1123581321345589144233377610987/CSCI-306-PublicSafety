@@ -9,8 +9,9 @@ public class Station {
     Scanner scanner = new Scanner(System.in);
 	
 	public void printDetectives() {
+		System.out.println("Listing all detectives for"+this.name);
 		for (int i=0;i<currDetectives;i++) {
-			System.out.print("/n"+detectives[i].badgeNumber+"     "+detectives[i].name);
+			System.out.print("/nDetective [Badge="+detectives[i].badgeNumber+", Name="+detectives[i].name+"]");
 		}
 		System.out.println();
 	}
@@ -25,7 +26,7 @@ public class Station {
 			lastBadgeNum++;
 		}
 		else {
-			println("Error: This station already has the maximum number of detectives!")
+			System.out.println("Can't hire any more detectives for "+this.name);
 		}}
 	
 	public Station(String name){
