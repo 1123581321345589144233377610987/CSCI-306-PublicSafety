@@ -1,10 +1,9 @@
 
 abstract class Person {
-	String myName = new String();
-	String occupation = new String();
+	String myName;
+	String occupation;
 	
 	public Person(String myName, String occupation) {
-		super();
 		this.myName = myName;
 		this.occupation = occupation;
 	}
