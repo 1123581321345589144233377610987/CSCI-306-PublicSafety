@@ -1,0 +1,22 @@
+
+public class PetOwner extends Person {
+	String animal;
+	String animalName;
+	
+	public PetOwner(String myName, String occupation, String animal, String animalName) {
+		super(myName, occupation);
+		this.animal = animal;
+		this.animalName = animalName;
+	}
+
+	@Override
+	void answerQuestion() {
+		System.out.println("My dogs walk me more than I walk them.");
+	}
+
+	@Override
+	void askQuestion() {
+		System.out.println("Do I actually own my pets or do they own me?");
+	}
+	
+}
