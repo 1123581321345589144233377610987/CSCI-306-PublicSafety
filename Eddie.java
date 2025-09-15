@@ -10,7 +10,6 @@ public class Eddie extends Person{
 	private final static String [] opinions = {"like", "love", "don't like", "hate"};
 	private final static String [] objects = {"the color blue", "pickleball", "card games", "getting up early", "going to bed late"};
 	private String opinion;
-	//private final static String [] opinions = {"I don't like the color blue.", "I play pickleball.", "I love the color blue.", "I'm really into card games."};
 	private boolean answered;
 	
 	private int cloneNum=1;
@@ -47,3 +46,4 @@ public class Eddie extends Person{
 	}
 	
 }
+
