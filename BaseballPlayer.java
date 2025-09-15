@@ -5,6 +5,7 @@ public class BaseballPlayer extends Person {
 	private final static String [] answers = {"Rockies", "Cardinals", "Yankees", "Blue Jays"};
 	private static int x = 0;
 	
+	//Constructor with extra variables in addition to the abstract class
 	public BaseballPlayer(String myName, String occupation, String team, String city) {
 		super(myName, occupation);
 		this.team = team;
@@ -26,7 +27,7 @@ public class BaseballPlayer extends Person {
 		}
 	}
 	
-	//overriding the abstract func
+	//overriding the abstract func to ask a question
 	@Override
 	void askQuestion() {
 		System.out.println("Do you live in " + this.city + "?");
