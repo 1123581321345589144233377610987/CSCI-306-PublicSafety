@@ -4,28 +4,38 @@
 import java.util.Random; 
 
 public class Eddie extends Person{
-	private static int counter = 1;
+	private static int counter = 1; //counts how many Eddies have been made
+	private int cloneNum=1; // the value of counter at construction, unique to each Eddie
+	private String cloneName; //Eddie # <CloneNum>
+	
+	//questions Eddies ask
 	private String [] questions ={"What is this for?", "Wait, what do you mean I'm a person?"};
+	
+	//all Eddies have the same first anaswer
 	private String answer = "Wait... I need to know what this is for";
+	
+	//used to generate an Eddie's (hopefully) unique opinion
 	private final static String [] opinions = {"like", "love", "don't like", "hate"};
 	private final static String [] objects = {"the color blue", "pickleball", "card games", "getting up early", "going to bed late"};
 	private String opinion;
+	
+	//tracks how many times each Eddie has asked/answered a question
 	private int answered;
 	
-	private int cloneNum=1;
-	private String cloneName;
+	//creating an instance of the random class
 	Random random = new Random();
 	
 	public Eddie(String myName, String occupation) {
 		super(myName, occupation);
 		cloneNum=counter;
 		this.cloneName="Eddie #"+cloneNum;
-		counter++;
-		answered=0;
+		counter++; //updates counter since a new Eddie has been created
+		answered=0; //at construction, an Eddie has not asked or answered any questions
 		opinion= "I really "+opinions[random.nextInt(opinions.length)]+" "+objects[random.nextInt(objects.length)]+".";
 		
 	}
 	public void askQuestion() {
+		//iterates through array of possible questions
 		System.out.println(questions[answered%questions.length]);
 		answered++;
 	}
@@ -35,6 +45,7 @@ public class Eddie extends Person{
 			System.out.println("Clones are indiviuals too.");
 		}
 		else {
+			//an Eddie should only say this once - the first time they are asked a question
 			System.out.println(answer);
 		}
 	}
